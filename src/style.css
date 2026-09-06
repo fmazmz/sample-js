@@ -60,6 +60,17 @@
     box-sizing: border-box;
 }
 
+header {
+    background: var(--muted);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: var(--text);
+    text-align: right;
+}
+
 body {
     margin: 0;
     background: var(--bg);
