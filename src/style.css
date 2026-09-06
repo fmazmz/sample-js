@@ -34,8 +34,12 @@
 /* Base optimized for mobile layout */
 .project-grid {
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr;
     gap: 10rem;
+}
+
+.project-card {
+    background: #ffff10;
 }
 
 /* Tablet 768+ */
@@ -91,4 +95,9 @@ h2 {
 
 a {
     color: var(--accent);
+}
+
+footer {
+    background: var(--muted);
+    margin: 0px;
 }

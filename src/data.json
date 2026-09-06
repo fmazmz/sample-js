@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Project 1",
+        "category": "web",
+        "year": 2025,
+        "summary": "Landing page for Acme AB",
+        "description": "Web design project"
+    },
+    {
+        "id": 2,
+        "title": "Project 2",
+        "category": "ai",
+        "year": 2025,
+        "summary": "Landing page for Acme AB",
+        "description": "Web design project"
+    },
+    {
+        "id": 3,
+        "title": "Project 3",
+        "category": "support",
+        "year": 2025,
+        "summary": "Landing page for Acme AB",
+        "description": "Web design project"
+    },
+    {
+        "id": 3,
+        "title": "Project 3",
+        "category": "web",
+        "year": 2025,
+        "summary": "Landing page for Acme AB",
+        "description": "Web design project"
+    }
+]

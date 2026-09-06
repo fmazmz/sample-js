@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Landing</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -31,9 +32,15 @@
             <p>Some text.</p>
             <a href="#projects">View projects</a>
         </section>
+
         <section id="projects" aria-labelledby="projects-title">
             <h2 id="projects-title">Highlighted projects</h2>
-            <div class="project-grid"></div>
+
+            <div id="project-grid" class="project-grid">
+                <article id="project-card" class="project-card">One</article>
+                <article id="project-card" class="project-card">Two</article>
+                <article id="project-card" class="project-card">Three</article>
+            </div>
         </section>
         <section id="about">
             <h2>About</h2>
