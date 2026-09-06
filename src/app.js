@@ -59,3 +59,19 @@ const detail = document.getElementById("project-detail");
 
 if (document.getElementById("project-grid")) loadAllProjects();
 if (document.getElementById("project-detail")) loadProjectById(id);
+
+const form = document.getElementById("contact-form");
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const interest = document.getElementById("interest").value;
+    const message = document.getElementById("message").value.trim();
+
+    console.log({ name, email, interest, message });
+
+    form.reset();
+});
+
+
