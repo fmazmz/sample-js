@@ -64,12 +64,16 @@
     color: inherit;
 }
 
+.project-card a {
+    color: var(--bg);
+}
+
 * {
     box-sizing: border-box;
 }
 
 header {
-    background: var(--muted);
+    background: var(--bg);
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -84,7 +88,7 @@ header {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: firebrick;
+    background-color: var(--accent);
 }
 
 
@@ -142,6 +146,6 @@ a {
 }
 
 footer {
-    background: var(--muted);
+    background: var(--bg);
     margin: 0px;
 }
