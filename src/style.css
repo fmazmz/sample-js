@@ -109,8 +109,17 @@ ul li a:hover {
 }
 
 .hero-section {
-    margin: 10px;
+    color: var(--surface);
+    background-color: var(--accent);
     text-align: center;
+
+    h1 {
+        color: var(--surface);
+    }
+
+    a {
+        color: var(--surface);
+    }
 }
 
 body {
