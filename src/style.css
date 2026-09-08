@@ -135,7 +135,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-
+    margin-bottom: 150px;
 }
 
 h1,
