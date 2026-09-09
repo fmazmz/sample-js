@@ -55,22 +55,36 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <form id="contact-form" class="contact-form" novalidate>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required minlength="3">
+            <form id="contact-form" class="contact-form" onsubmit="return validateForm(event)" onreset="resetErrors()">
+                <p>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text">
+                    <span id="name-error" class="error-message"></span>
+                </p>
 
-                <label for="email">E-post</label>
-                <input id="email" name="email" type="email" required>
+                <p>
+                    <label for="email">E-post</label>
+                    <input id="email" name="email" type="email" required>
+                    <span id="email-error" class="error-message"></span>
+                </p>
 
-                <label for="interest">Interests</label>
-                <select id="interest" name="interest" required>
-                    <option value="">Choose...</option>
-                    <option value="web">Web</option>
-                    <option value="design">Design</option>
-                    <option value="app">App</option>
-                </select>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4"></textarea>
+                <p>
+                    <label for="interest">Interests</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Choose...</option>
+                        <option value="web">Web</option>
+                        <option value="design">Design</option>
+                        <option value="app">App</option>
+                    </select>
+                    <span id="interest-error" class="error-message"></span>
+                </p>
+
+                </p>
+                <p>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                    <span id="message-error" class="error-message"></span>
+                </p>
                 <button type="submit">Send</button>
                 <p id="form-msg" role="status"></p>
             </form>

@@ -52,6 +52,30 @@ async function mapProjectsToCards(projects) {
         .join("");
 }
 
+function validateForm(event) {
+    event.preventDefault();
+
+    const form = document.getElementById("contact-form");
+    const fields = form.elements;
+
+    for (const field of fields) {
+
+        // constructs the element ids of all error fields for each input field
+        const errorLabel = document.getElementById(field.id + "-error");
+
+        if (field.value.trim() === "") {
+            errorLabel.textContent = "Please fill in this field";
+            isValid = false;
+        } else {
+            errorLabel.textContent = "";
+        }
+    }
+    alert("Your message has reached us, we will get back to you soon!");
+    return true;
+}
+
+
+
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
 
@@ -61,17 +85,4 @@ if (document.getElementById("project-grid")) loadAllProjects();
 if (document.getElementById("project-detail")) loadProjectById(id);
 
 const form = document.getElementById("contact-form");
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const interest = document.getElementById("interest").value;
-    const message = document.getElementById("message").value.trim();
-
-    console.log({ name, email, interest, message });
-
-    form.reset();
-});
-
 
