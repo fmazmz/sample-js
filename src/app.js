@@ -56,20 +56,31 @@ function validateForm(event) {
     event.preventDefault();
 
     const form = document.getElementById("contact-form");
-    const fields = form.elements;
+    const fields = form.querySelectorAll("input, select, textarea");
 
+    let isValid = true;
     for (const field of fields) {
 
         // constructs the element ids of all error fields for each input field
         const errorLabel = document.getElementById(field.id + "-error");
 
+
         if (field.value.trim() === "") {
             errorLabel.textContent = "Please fill in this field";
             isValid = false;
-        } else {
+        } else if (field.id == "name" && field.value.trim().length < 3) {
+            errorLabel.textContent = "Please use a name longer than 3 characters";
+            isValid = false;
+        }
+        else {
             errorLabel.textContent = "";
         }
+
     }
+
+    if (!isValid) return false;
+    form.reset();
+
     alert("Your message has reached us, we will get back to you soon!");
     return true;
 }
